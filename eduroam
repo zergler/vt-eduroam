@@ -1,0 +1,18 @@
+Description='VT-Wireless eduroam template'
+Interface=wlan0
+Connection=wireless
+Security=wpa-configsection
+IP=dhcp
+ESSID=eduroam
+WPAConfigSection=(
+    'ssid="eduroam"'
+    'key_mgmt=WPA-EAP'
+    'eap=PEAP'
+    'auth_alg=OPEN'
+    'phase2="auth=MSCHAPV2"'
+    'identity="your_PID@vt.edu"'
+    'password="your_password"'
+    'priority=1'
+    'ca_path="/etc/ssl/certs"'
+    'ca_path2="/etc/ssl/certs"'
+)
